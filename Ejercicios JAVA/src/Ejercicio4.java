@@ -6,24 +6,26 @@ public class Ejercicio4 {
         System.out.println("==== Placa de un vehiculo ====");
 
 
-        String nombre;
-        int codigo;
-        int semestre;
-        Double promedio;
-        Boolean matriculado;
+        String placa;
+        int modelo;
+        int cilindraje;
+        Double precio;
+        char inicial = 'N';
+        Boolean soat;
 
 
-        nombre="Isaac";
-        codigo=200;
-        semestre=3;
-        promedio=3.85;
-        matriculado=true;
+        placa="USA00I";
+        modelo=2026;
+        cilindraje=1000;
+        precio=99999.9;
+        soat=true;
 
 
-        System.out.println("Nombre:" + nombre);
-        System.out.println("Codigo:" + codigo);
-        System.out.println("Semestre:" + semestre);
-        System.out.println("Promedio:" + promedio);
-        System.out.println("Matriculado:" + matriculado);
+        System.out.println("Placa:" + placa);
+        System.out.println("Modelo:" + modelo);
+        System.out.println("Cilindraje en CC:" + cilindraje);
+        System.out.println("Precio de compra:" + precio);
+        System.out.println("Inicial del color:" + inicial);
+        System.out.println("SOAT vigente:" + soat);
     }
 }
