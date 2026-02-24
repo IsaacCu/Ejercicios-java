@@ -14,7 +14,13 @@ public class Ejercicio3 {
         temperatura=50.8;
         nombresensor="Sensor Principal";
         numerolectura=5;
-        enAlarma=true;
+        if (temperatura>80){
+            enAlarma=true;
+        }
+        else{
+            enAlarma=false;
+        }
+        
         
 
 
