@@ -1,3 +1,10 @@
+// Ejercicio 6 — Turno en un banco
+// Un cajero de banco trabaja con el número del turno actual. Se crea una variable turnoActual
+//  y se asigna a turnoEnPantalla.
+// Demuestra con código que cambiar turnoEnPantalla no afecta a turnoActual (comportamiento por 
+// valor).
+// Explica en un comentario por qué ocurre esto.
+
 public class Ejercicio6 {
         public static void main(String[] args) {
             String turnoActual="001";
@@ -7,10 +14,11 @@ public class Ejercicio6 {
             System.out.println("Turno actual: " +  turnoActual);
             System.out.println("Turno en Pantalla: " + turnoenPantalla);
 
-            //como podemos observar, al ejecutar el codigo la variable turnoActual
-            //no se modifica, y esto es porque la variable turnoenpantalla no esta
-            //ligada a turnoActual, a pesar de que se igualaron, esto pasa porque solo se creo
-            //una copia de la variable turnoActual en turnoenPantalla y esto no las liga.
+            
     }
     
 }
+//como podemos observar, al ejecutar el codigo la variable turnoActual
+//no se modifica, y esto es porque la variable turnoenpantalla no esta
+//ligada a turnoActual, a pesar de que se igualaron, esto pasa porque solo se creo
+//una copia de la variable turnoActual en turnoenPantalla y esto no las liga.
