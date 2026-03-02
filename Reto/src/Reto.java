@@ -29,5 +29,7 @@ public class Reto {
         total=subto;
     }
     System.out.println("total a pagar:"+ total);
+
+    sc.close();
     }
 }
