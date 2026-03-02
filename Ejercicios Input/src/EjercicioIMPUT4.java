@@ -40,7 +40,7 @@ public class EjercicioIMPUT4 {
             System.out.println("Debe aceptar los terminos y condiciones");
         }
 
-        
+        sc.close();
     }
     
 }

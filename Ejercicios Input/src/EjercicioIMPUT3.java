@@ -43,5 +43,6 @@ public class EjercicioIMPUT3 {
         System.out.println("Promedio: "+ promedio);
         System.out.println("Estado: "+ estado);
 
+        sc.close();
     }
 }

@@ -23,6 +23,7 @@ public class EjercicioIMPUT2 {
         System.out.println("==== Conversor ====");
         System.out.println( celsius +" ºC = " + fahrenheit +" ºF = " + kelvin +" ºK");
 
+        sc.close();
     }
     
 }

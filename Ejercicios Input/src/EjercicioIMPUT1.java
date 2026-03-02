@@ -37,6 +37,7 @@ public class EjercicioIMPUT1 {
         System.out.println("IVA(19%): " + iva);
         System.out.println("Total: " + total);
 
+        sc.close();
     }
     
 }
