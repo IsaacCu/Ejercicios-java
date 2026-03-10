@@ -57,6 +57,9 @@ public class EjercicoBUSQUEDA3 {
         }
         System.out.println();
     }
+
+    // segun lo que entendi este metodo es mas eficiente porque compara con los terminos que
+    //  estan mas lejos del medio y esto permite organizarlos en menos pasos
             
         
 

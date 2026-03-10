@@ -52,4 +52,7 @@ public class EjercicoBUSQUEDA4 {
         }
         System.out.println();
     }
+    // es porque esta funcion compara las iniciales por orden alfabetica que
+    //  ya viene integrada, sin importar si son mayusculas o minusculas, esto permite 
+    // comparar y organizar de manera mas rapida
 }

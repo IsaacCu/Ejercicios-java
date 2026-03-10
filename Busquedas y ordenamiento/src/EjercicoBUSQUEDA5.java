@@ -20,7 +20,70 @@ public class EjercicoBUSQUEDA5 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
+        int[] numeros = new int[6];
 
+        System.out.println("Ingrese 6 numeros enteros:");
+
+        for (int i = 0; i < 6; i++) {
+            System.out.print("Numero " + (i + 1) + ": ");
+            numeros[i] = sc.nextInt();
+        }
+
+        // Copias del arreglo
+        int[] seleccion = numeros.clone();
+        int[] insercion = numeros.clone();
+
+        int intercambiosSeleccion = 0;
+        int movimientosInsercion = 0;
+
+        // ----- ORDENAMIENTO POR SELECCION -----
+        for (int i = 0; i < seleccion.length - 1; i++) {
+
+            int min = i;
+
+            for (int j = i + 1; j < seleccion.length; j++) {
+                if (seleccion[j] < seleccion[min]) {
+                    min = j;
+                }
+            }
+
+            if (min != i) {
+                int temp = seleccion[i];
+                seleccion[i] = seleccion[min];
+                seleccion[min] = temp;
+
+                intercambiosSeleccion++;
+            }
+        }
+
+        // ----- ORDENAMIENTO POR INSERCION -----
+        for (int i = 1; i < insercion.length; i++) {
+
+            int actual = insercion[i];
+            int j = i - 1;
+
+            while (j >= 0 && insercion[j] > actual) {
+                insercion[j + 1] = insercion[j];
+                j--;
+                movimientosInsercion++;
+            }
+
+            insercion[j + 1] = actual;
+        }
+
+        // RESULTADOS
+        System.out.println("\nResultados:");
+        System.out.println("Intercambios en Seleccion: " + intercambiosSeleccion);
+        System.out.println("Movimientos en Insercion: " + movimientosInsercion);
+
+        if (intercambiosSeleccion < movimientosInsercion) {
+            System.out.println("Seleccion fue mas eficiente para estos datos.");
+        } else if (movimientosInsercion < intercambiosSeleccion) {
+            System.out.println("Insercion fue mas eficiente para estos datos.");
+        } else {
+            System.out.println("Ambos algoritmos tuvieron la misma eficiencia.");
+        }
+        
         sc.close();
     }
 }
