@@ -46,6 +46,8 @@ public class EjercicoBUSQUEDA4 {
         sc.close();
 
     }
+
+    
     public static void imprimirArreglo(String[] args) {
         for (String d : args) {
             System.out.print("[" + d + "] ");
