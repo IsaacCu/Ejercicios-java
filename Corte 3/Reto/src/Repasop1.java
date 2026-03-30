@@ -76,24 +76,19 @@ public class Repasop1 {
         }
         sc.close();
     }
-
-
     public static class Productos{
         public int id;
         public String nombre;
         public double precio;
         public int stock;
-
         public Productos(int id,String nombre,double precio,int stock){
             this.id=id;
             this.nombre=nombre;
             this.precio=precio;
             this.stock=stock;
         }
-
         public void imprimir(){
             System.out.println("/ID: "+ this.id + " /NOMBRE: " + this.nombre + " /PRECIO: "+this.precio+" /STOCK: "+this.stock+" /");
         }
-
     }
 }
