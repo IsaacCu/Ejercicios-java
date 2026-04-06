@@ -24,8 +24,6 @@ public class Historial {
                     bandera = actual.temperatura;
                 }
                 actual = actual.siguiente;
-
-
             }
             actual = cabeza;
             while (actual != null) {
