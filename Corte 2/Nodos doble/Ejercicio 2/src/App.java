@@ -1,15 +1,6 @@
 import java.util.Scanner;
 
 public class App {
-// 2. Carrusel de Imágenes (Galería Interactiva)
-// Simula el comportamiento de una galería de fotos en una aplicación móvil.
-
-// La Clase Fotografia (Nodo): Debe contener nombreArchivo (String), tamanoMB (double) y resolucion
-// (String).
-// El Problema: El usuario puede avanzar a la "Siguiente Foto" o retroceder a la "Foto Anterior". Si 
-// llega al final, no puede avanzar más (a menos que sea circular, pero por ahora manténlo lineal).
-// Reto: Crea un método reproducirGaleria() que recorra toda la lista hacia adelante y luego toda la 
-// lista hacia atrás para mostrar todas las fotos.
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -20,6 +11,9 @@ public class App {
             System.out.println("==============================================");
             System.out.println("  [1] Agregar Fotografia");
             System.out.println("  [2] Recorrer de inico a fin la Galeria");
+            System.out.println("  [3] Ver foto actual");
+            System.out.println("  [4] Foto anterior");
+            System.out.println("  [5] Foto siguiente");
             System.out.println();
             System.out.println("  [0] Salir");
             System.out.println("==============================================");
@@ -45,6 +39,18 @@ public class App {
 
                 case 2:
                     galeria.recorrer_galeria();
+                    break;
+
+                case 3:
+                    galeria.verActual();
+                    break;
+
+                case 4:
+                    galeria.deshacer();
+                    break;
+
+                case 5:
+                    galeria.rehacer();
                     break;
 
                 case 0:

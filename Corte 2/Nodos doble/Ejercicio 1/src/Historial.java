@@ -28,7 +28,7 @@ public class Historial {
     return cambioActual.anterior; // Mover el puntero hacia atrás
   }
 
-  // Método para rehacer el siguiente cambio
+  // Método para rehacer el siguiente cambio 
   public Cambio rehacer(Cambio cambioActual) {
     if (cambioActual.siguiente == null) {
       System.out.println("No hay cambios para rehacer.");
