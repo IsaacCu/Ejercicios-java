@@ -8,8 +8,8 @@ Reto: Implementa métodos deshacer() y rehacer() que muevan un puntero actual a 
 
 import java.util.Scanner;
 
-public class App {
-    public static void main(String[] args) throws Exception {
+public class App { 
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int opcion;
         Historial historial = new Historial();
