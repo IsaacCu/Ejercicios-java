@@ -1,89 +1,89 @@
+public class Galeria {
+    Foto cabeza;
+    Foto cola;
+    Foto puntero;
 
-public class EditorCapas {
-    Capa cabeza;
-    Capa cola;
-    Capa puntero;
-    public EditorCapas(){
+    public Galeria(){
         this.cabeza = null;
         this.cola = null;
         this.puntero = null;
     }
     
-    public void imprimir_Activa(Capa capaimprimir){
-        System.out.println("-Nombre: "+capaimprimir.nombre+". -Activo: {SI}. -Tipo: "+capaimprimir.tipo);
+    public void imprimir_favorita(Foto fotoimprimir){
+        System.out.println("-Titulo: "+fotoimprimir.titulo+". -Fecha: "+fotoimprimir.fecha+" -Favorito: [SI].");
     }
 
-    public void imprimir_Inactiva(Capa capaimprimir){
-        System.out.println("-Nombre: "+capaimprimir.nombre+". -Activo: {NO}. -Tipo: "+capaimprimir.tipo);
+    public void imprimir_nofavorita(Foto fotoimprimir){
+        System.out.println("-Titulo: "+fotoimprimir.titulo+". -Fecha: "+fotoimprimir.fecha+" -Favorito: [NO].");
     }
 
     public boolean esta_Vacia(){
         return cabeza == null;
     }
-    public void agregar_capa(Capa nuevacapa){
+    public void agregar_foto(Foto nuevafoto){
         if (esta_Vacia()) {
-            nuevacapa.siguiente = nuevacapa;
-            nuevacapa.anterior = nuevacapa;
-            cabeza = nuevacapa;
-            cola = nuevacapa;
-            puntero = nuevacapa;
+            nuevafoto.siguiente = nuevafoto;
+            nuevafoto.anterior = nuevafoto;
+            cabeza = nuevafoto;
+            cola = nuevafoto;
+            puntero = nuevafoto;
         }
         else{
-            nuevacapa.siguiente = cabeza;
-            nuevacapa.anterior = cola;
-            cola.siguiente = nuevacapa;
-            cabeza.anterior = nuevacapa;
-            cola = nuevacapa;
-            puntero = nuevacapa;
+            nuevafoto.siguiente = cabeza;
+            nuevafoto.anterior = cola;
+            cola.siguiente = nuevafoto;
+            cabeza.anterior = nuevafoto;
+            cola = nuevafoto;
+            puntero = nuevafoto;
         }
     }
     public void mostrar_puntero(){
         if (esta_Vacia()) {
-            System.out.println("No existen Capas.");
+            System.out.println("No existen fotos.");
         }
         else{
-            if (es_Visible(puntero)) {
-                imprimir_Activa(puntero);
+            if (es_favorita(puntero)) {
+                imprimir_favorita(puntero);
             }
             else{
-                imprimir_Inactiva(puntero);
+                imprimir_nofavorita(puntero);
             }
         }
     }
 
-    public void subir_Capa(){
+    public void anterior_foto(){
         if (esta_Vacia()) {
-            System.out.println("No existen capas.");
+            System.out.println("No existen fotos.");
         }
         else{
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("foto actual: "+ puntero.titulo);
             puntero = puntero.anterior;
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("foto actual: "+ puntero.titulo);
         }
     }
 
-    public void bajar_Capa(){
+    public void siguiente_foto(){
         if (esta_Vacia()) {
-            System.out.println("No existen capas.");
+            System.out.println("No existen fotos.");
         }
         else{
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("Seleccion anterior: "+ puntero.titulo);
             puntero = puntero.siguiente;
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("Seleccion actual: "+ puntero.titulo);
         }
     }
 
-    public void cambiar_Visibilidad(int opcion3){
+    public void cambiar_favorito(int opcion3){
         if ( esta_Vacia()) {
-            System.out.println("No existen capas.");
+            System.out.println("No existen Fotos.");
         }
         else{
             switch (opcion3) {
                 case 1:
-                    puntero.activo = true;
+                    puntero.esFavorita = true;
                     break;
                 case 2:
-                    puntero.activo = false;
+                    puntero.esFavorita = false;
                     break;
                 default:
                     System.out.println("Opcion Invalida.");
@@ -93,8 +93,8 @@ public class EditorCapas {
         }
     }
 
-    public boolean es_Visible(Capa es){
-        return es.activo;
+    public boolean es_favorita(Foto es){
+        return es.esFavorita;
     }
 
     public void eliminar_Actual(){
@@ -121,36 +121,36 @@ public class EditorCapas {
                 puntero.siguiente.anterior = puntero.anterior;
                 puntero = puntero.siguiente;
             }
-            System.out.println("Capa Borrada exitosamente.");
+            System.out.println("Foto Borrada exitosamente.");
             return;
         }
-        System.out.println("No existen Capas.");
+        System.out.println("No existen Fotos.");
     }
 
-    public void mostrar_Capas(){
+    public void mostrar_fotos(){
         if (esta_Vacia()) {
-            System.out.println("El historial esta vacio.");
+            System.out.println("La galeria esta vacia.");
         }
         else{
-            Capa actual = cabeza;
+            Foto actual = cabeza;
             do {
                 
                 if (actual == puntero) {
-                    System.out.print(">>");
-                    if (es_Visible(actual)) {
-                        imprimir_Activa(actual);
+                    System.out.print("[>>]");
+                    if (es_favorita(actual)) {
+                        imprimir_favorita(actual);
                     }
                     else{
-                        imprimir_Inactiva(actual);
+                        imprimir_nofavorita(actual);
                     }
                 }
                 else{
-                    System.out.print("  ");
-                    if (es_Visible(actual)) {
-                        imprimir_Activa(actual);
+                    System.out.print("[  ]");
+                    if (es_favorita(actual)) {
+                        imprimir_favorita(actual);
                     }
                     else{
-                        imprimir_Inactiva(actual);
+                        imprimir_nofavorita(actual);
                     }
                 }
                 actual = actual.siguiente;
