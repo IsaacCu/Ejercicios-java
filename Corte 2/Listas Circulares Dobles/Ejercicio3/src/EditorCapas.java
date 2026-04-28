@@ -56,9 +56,9 @@ public class EditorCapas {
             System.out.println("No existen capas.");
         }
         else{
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("Seleccion Actual: "+ puntero.nombre);
             puntero = puntero.anterior;
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("Seleccion Actualizada: "+ puntero.nombre);
         }
     }
 
@@ -67,9 +67,9 @@ public class EditorCapas {
             System.out.println("No existen capas.");
         }
         else{
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("Seleccion Actual: "+ puntero.nombre);
             puntero = puntero.siguiente;
-            System.out.println("Capa actual: "+ puntero.nombre);
+            System.out.println("Seleccion Actualizada: "+ puntero.nombre);
         }
     }
 

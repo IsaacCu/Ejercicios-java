@@ -56,9 +56,9 @@ public class Galeria {
             System.out.println("No existen fotos.");
         }
         else{
-            System.out.println("foto actual: "+ puntero.titulo);
+            System.out.println("Seleccion anterior: "+ puntero.titulo);
             puntero = puntero.anterior;
-            System.out.println("foto actual: "+ puntero.titulo);
+            System.out.println("Seleccion actual: "+ puntero.titulo);
         }
     }
 

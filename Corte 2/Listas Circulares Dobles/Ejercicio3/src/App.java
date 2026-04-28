@@ -41,7 +41,7 @@ public class App {
                     String nombre = sc.nextLine();
                     boolean activo;
                     while (true) {
-                        System.out.println("Activo (1-True/2-False): ");
+                        System.out.println("Activo (1-SI/2-NO): ");
                         int opcion2 = sc.nextInt();
                         if (opcion2 == 1) {
                             activo = true;
@@ -82,8 +82,8 @@ public class App {
                         System.out.println("Puntero actual: ");
                         editorCapas.mostrar_puntero();
                         System.out.println("Cambiar estado a:");
-                        System.out.println("1- True.");
-                        System.out.println("2- false");
+                        System.out.println("1- SI.");
+                        System.out.println("2- NO");
                         int opcion3; 
                         opcion3 = sc.nextInt();
                         editorCapas.cambiar_Visibilidad(opcion3);
