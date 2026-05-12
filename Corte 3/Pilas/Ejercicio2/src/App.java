@@ -44,6 +44,10 @@ public class App {
                 case 2:
                     ensamblaje.limpiarHastaDefecto();
                     break;
+                
+                case 3:
+                    System.out.println("Cerrando programa...");
+                    break;
             
                 default:
                     System.out.println("Opcion Invalida.");
