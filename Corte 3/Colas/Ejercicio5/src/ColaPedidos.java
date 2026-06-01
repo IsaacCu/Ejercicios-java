@@ -72,6 +72,7 @@ public class ColaPedidos {
             int despachados = 0;
             int cancelados = 0;
             Pedido actual = salida;
+            System.out.println("-- Clientes Despachados --");
             while (actual!= null) {
                 if (dequeue().Cancelado == true) {
                     cancelados++;
