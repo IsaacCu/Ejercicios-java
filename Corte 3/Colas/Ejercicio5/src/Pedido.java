@@ -3,7 +3,7 @@ public class Pedido {
     String Cliente;
     double TotalPagar;
     boolean Cancelado;
-    Vehiculo Siguiente;
+    Pedido Siguiente;
 
     public Pedido(String numeropedido, String cliente, double totalPagar, boolean cancelado) {
         NumeroPedido = numeropedido;
